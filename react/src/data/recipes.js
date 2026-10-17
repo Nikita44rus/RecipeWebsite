@@ -1,0 +1,506 @@
+import TimerIcon from "../assets/images/Timer.svg";
+import ForkKnifeIcon from "../assets/images/ForkKnife.svg";
+import food13 from "../assets/images/recipes/food-13.png";
+import food14 from "../assets/images/recipes/food-14.png";
+import food15 from "../assets/images/recipes/food-15.png";
+import food16 from "../assets/images/recipes/food-16.png";
+import food17 from "../assets/images/recipes/food-17.png";
+import food18 from "../assets/images/recipes/food-18.png";
+import food19 from "../assets/images/recipes/food-19.png";
+import food20 from "../assets/images/recipes/food-20.png";
+import more1 from "../assets/images/more/food-1.png";
+import more2 from "../assets/images/more/food-2.png";
+import more3 from "../assets/images/more/food-3.png";
+import more4 from "../assets/images/more/food-4.png";
+import more5 from "../assets/images/more/food-5.png";
+import more6 from "../assets/images/more/food-6.png";
+import more7 from "../assets/images/more/food-7.png";
+import more8 from "../assets/images/more/food-8.png";
+
+//Автор
+import authorJohn from "../assets/images/author-john.png";
+
+export const recipes = [
+  //Simple & Tasty
+  {
+    id: 1,
+    title: "Big and Juicy Wagyu Beef Cheeseburger",
+    time: "30 Minutes",
+    category: "Snack",
+    image: food13,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "15 Minutes",
+    cookTime: "15 Minutes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a faucibus.",
+    nutrition: {
+      calories: "450 kcal",
+      totalFat: "28 g",
+      protein: "32 g",
+      carbohydrate: "25 g",
+      cholesterol: "95 mg",
+    },
+    ingredients: {
+      main: ["Wagyu beef patty", "Cheddar cheese", "Burger bun", "Lettuce", "Tomato", "Onion"],
+      sauce: ["Special sauce", "Mustard", "Ketchup"],
+    },
+    directions: [
+      {
+        title: "Prepare the patty",
+        text: "Season the wagyu beef and form into a patty. Cook to your preferred doneness.",
+      },
+      {
+        title: "Assemble the burger",
+        text: "Toast the bun, add the patty, cheese and fresh vegetables.",
+      },
+      {
+        title: "Add sauce and serve",
+        text: "Finish with the special sauce and serve immediately.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Fresh Lime Roasted Salmon with Ginger Sauce",
+    time: "30 Minutes",
+    category: "Fish",
+    image: food14,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "15 Minutes",
+    cookTime: "15 Minutes",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio.",
+    nutrition: {
+      calories: "280 kcal",
+      totalFat: "12 g",
+      protein: "25 g",
+      carbohydrate: "8 g",
+      cholesterol: "45 mg",
+    },
+    ingredients: {
+      main: ["Salmon fillet", "Lime", "Ginger", "Garlic", "Soy sauce"],
+      sauce: ["Honey", "Sesame oil", "Chili flakes"],
+    },
+    directions: [
+      { title: "Prepare the salmon", text: "Season the salmon with salt, pepper and lime zest." },
+      { title: "Make the ginger sauce", text: "Mix grated ginger, lime juice, soy sauce and honey." },
+      { title: "Roast and serve", text: "Roast for 12–15 minutes and drizzle with the sauce." },
+    ],
+  },
+  {
+    id: 3,
+    title: "Strawberry Oatmeal Pancake with Honey Syrup",
+    time: "30 Minutes",
+    category: "Breakfast",
+    image: food15,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "10 Minutes",
+    cookTime: "20 Minutes",
+    description: "Fluffy oatmeal pancakes topped with fresh strawberries and honey syrup.",
+    nutrition: {
+      calories: "320 kcal",
+      totalFat: "9 g",
+      protein: "8 g",
+      carbohydrate: "52 g",
+      cholesterol: "55 mg",
+    },
+    ingredients: {
+      main: ["Oats", "Flour", "Eggs", "Milk", "Fresh strawberries"],
+      sauce: ["Honey", "Butter"],
+    },
+    directions: [
+      { title: "Make the batter", text: "Combine oats, flour, eggs and milk until smooth." },
+      { title: "Cook the pancakes", text: "Fry on medium heat until golden on both sides." },
+      { title: "Serve", text: "Top with strawberries and drizzle with honey syrup." },
+    ],
+  },
+  {
+    id: 4,
+    title: "Fresh and Healthy Mixed Mayonnaise Salad",
+    time: "30 Minutes",
+    category: "Healthy",
+    image: food16,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "20 Minutes",
+    cookTime: "10 Minutes",
+    description: "A refreshing mixed salad with a light mayonnaise dressing.",
+    nutrition: {
+      calories: "180 kcal",
+      totalFat: "11 g",
+      protein: "5 g",
+      carbohydrate: "15 g",
+      cholesterol: "10 mg",
+    },
+    ingredients: {
+      main: ["Lettuce", "Cucumber", "Tomato", "Avocado", "Corn", "Mayonnaise"],
+      sauce: [],
+    },
+    directions: [
+      { title: "Chop the vegetables", text: "Cut all vegetables into bite-sized pieces." },
+      { title: "Mix and dress", text: "Add mayonnaise, season and toss gently." },
+    ],
+  },
+  {
+    id: 5,
+    title: "Chicken Meatballs with Cream Cheese",
+    time: "30 Minutes",
+    category: "Meat",
+    image: food17,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "15 Minutes",
+    cookTime: "15 Minutes",
+    description: "Juicy chicken meatballs filled with creamy cheese.",
+    nutrition: {
+      calories: "290 kcal",
+      totalFat: "18 g",
+      protein: "22 g",
+      carbohydrate: "8 g",
+      cholesterol: "80 mg",
+    },
+    ingredients: {
+      main: ["Chicken mince", "Cream cheese", "Onion", "Garlic", "Breadcrumbs", "Egg"],
+      sauce: ["Tomato sauce"],
+    },
+    directions: [
+      { title: "Prepare the mixture", text: "Mix chicken, cream cheese, onion, garlic and breadcrumbs." },
+      { title: "Form and cook", text: "Shape into balls and fry or bake until golden and cooked through." },
+    ],
+  },
+  {
+    id: 7,
+    title: "Fruity Pancake with Orange & Blueberry",
+    time: "30 Minutes",
+    category: "Sweet",
+    image: food18,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "10 Minutes",
+    cookTime: "20 Minutes",
+    description: "Sweet pancakes with orange zest and fresh blueberries.",
+    nutrition: {
+      calories: "310 kcal",
+      totalFat: "8 g",
+      protein: "7 g",
+      carbohydrate: "55 g",
+      cholesterol: "50 mg",
+    },
+    ingredients: {
+      main: ["Flour", "Eggs", "Milk", "Orange zest", "Blueberries"],
+      sauce: ["Honey", "Maple syrup"],
+    },
+    directions: [
+      { title: "Make the batter", text: "Mix flour, eggs, milk and orange zest." },
+      { title: "Cook", text: "Fry pancakes and add blueberries while cooking." },
+      { title: "Serve", text: "Drizzle with honey or maple syrup." },
+    ],
+  },
+  {
+    id: 8,
+    title: "The Best Easy One Pot Chicken and Rice",
+    time: "30 Minutes",
+    category: "Snack",
+    image: food19,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "10 Minutes",
+    cookTime: "20 Minutes",
+    description: "A simple and comforting one-pot chicken and rice dish.",
+    nutrition: {
+      calories: "350 kcal",
+      totalFat: "12 g",
+      protein: "28 g",
+      carbohydrate: "35 g",
+      cholesterol: "70 mg",
+    },
+    ingredients: {
+      main: ["Chicken thighs", "Rice", "Onion", "Garlic", "Chicken broth", "Carrot"],
+      sauce: [],
+    },
+    directions: [
+      { title: "Sauté the chicken", text: "Brown the chicken pieces with onion and garlic." },
+      { title: "Add rice and broth", text: "Pour in rice and broth, cover and simmer until cooked." },
+    ],
+  },
+  {
+    id: 9,
+    title: "The Creamiest Creamy Chicken and Bacon Pasta",
+    time: "30 Minutes",
+    category: "Noodles",
+    image: food20,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "10 Minutes",
+    cookTime: "20 Minutes",
+    description: "Rich and creamy pasta with chicken and crispy bacon.",
+    nutrition: {
+      calories: "420 kcal",
+      totalFat: "22 g",
+      protein: "25 g",
+      carbohydrate: "38 g",
+      cholesterol: "85 mg",
+    },
+    ingredients: {
+      main: ["Pasta", "Chicken breast", "Bacon", "Heavy cream", "Parmesan", "Garlic"],
+      sauce: [],
+    },
+    directions: [
+      { title: "Cook the pasta", text: "Boil pasta according to package instructions." },
+      { title: "Make the sauce", text: "Cook bacon and chicken, then add cream and parmesan." },
+      { title: "Combine", text: "Toss pasta with the creamy sauce and serve." },
+    ],
+  },
+
+  //More Recipes (Try this delicious recipe)
+  {
+    id: 101,
+    title: "Mixed Tropical Fruit Salad with Superfood Boosts",
+    time: "30 Minutes",
+    category: "Healthy",
+    image: more1,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "20 Minutes",
+    cookTime: "10 Minutes",
+    description: "A vibrant tropical fruit salad packed with superfoods.",
+    nutrition: {
+      calories: "190 kcal",
+      totalFat: "3 g",
+      protein: "2 g",
+      carbohydrate: "42 g",
+      cholesterol: "0 mg",
+    },
+    ingredients: {
+      main: ["Mango", "Kiwi", "Pineapple", "Berries", "Banana", "Chia seeds"],
+      sauce: ["Honey", "Lime juice", "Mint"],
+    },
+    directions: [
+      { title: "Prepare the fruits", text: "Peel and cut all fruits into bite-sized pieces." },
+      { title: "Mix and dress", text: "Add chia seeds, honey, lime and fresh mint. Toss gently." },
+    ],
+  },
+  {
+    id: 102,
+    title: "Big and Juicy Wagyu Beef Cheeseburger",
+    time: "30 Minutes",
+    category: "Western",
+    image: more2,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "15 Minutes",
+    cookTime: "15 Minutes",
+    description: "Premium wagyu beef cheeseburger with classic toppings.",
+    nutrition: {
+      calories: "480 kcal",
+      totalFat: "30 g",
+      protein: "34 g",
+      carbohydrate: "26 g",
+      cholesterol: "100 mg",
+    },
+    ingredients: {
+      main: ["Wagyu beef", "Cheese", "Brioche bun", "Pickles", "Onion"],
+      sauce: ["Burger sauce"],
+    },
+    directions: [
+      { title: "Cook the patty", text: "Season and grill the wagyu patty to medium." },
+      { title: "Assemble", text: "Build the burger with cheese, pickles and sauce." },
+    ],
+  },
+  {
+    id: 103,
+    title: "Healthy Japanese Fried Rice with Asparagus",
+    time: "30 Minutes",
+    category: "Healthy",
+    image: more3,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "15 Minutes",
+    cookTime: "15 Minutes",
+    description: "A light and flavorful Japanese-style fried rice with asparagus and eggs.",
+    nutrition: {
+      calories: "219.9 kcal",
+      totalFat: "10.7 g",
+      protein: "7.9 g",
+      carbohydrate: "22.3 g",
+      cholesterol: "37.4 mg",
+    },
+    ingredients: {
+      main: ["Cooked rice", "Eggs", "Asparagus", "Carrot", "Green peas", "Spring onion"],
+      sauce: ["Soy sauce", "Sesame oil", "Garlic", "Ginger"],
+    },
+    directions: [
+      {
+        title: "Prepare the ingredients",
+        text: "Chop all vegetables and beat the eggs. Use cold rice for best texture.",
+        image: more1,
+      },
+      {
+        title: "Cook eggs and vegetables",
+        text: "Scramble the eggs, then stir-fry the asparagus and other vegetables.",
+      },
+      {
+        title: "Combine everything",
+        text: "Add rice and sauce, stir-fry on high heat until everything is well mixed.",
+      },
+    ],
+  },
+  {
+    id: 104,
+    title: "Cauliflower Walnut Vegetarian Taco Meat",
+    time: "30 Minutes",
+    category: "Eastern",
+    image: more4,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "15 Minutes",
+    cookTime: "15 Minutes",
+    description: "Plant-based taco filling made from cauliflower and walnuts.",
+    nutrition: {
+      calories: "210 kcal",
+      totalFat: "14 g",
+      protein: "6 g",
+      carbohydrate: "18 g",
+      cholesterol: "0 mg",
+    },
+    ingredients: {
+      main: ["Cauliflower", "Walnuts", "Onion", "Garlic", "Spices", "Tomato paste"],
+      sauce: [],
+    },
+    directions: [
+      { title: "Pulse the ingredients", text: "Food-process cauliflower and walnuts until crumbly." },
+      { title: "Cook the mixture", text: "Sauté with onion, garlic, spices and tomato paste until fragrant." },
+    ],
+  },
+  {
+    id: 105,
+    title: "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
+    time: "30 Minutes",
+    category: "Healthy",
+    image: more5,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "20 Minutes",
+    cookTime: "10 Minutes",
+    description: "Colorful chicken salad with a sweet and tangy almond honey mustard dressing.",
+    nutrition: {
+      calories: "320 kcal",
+      totalFat: "18 g",
+      protein: "28 g",
+      carbohydrate: "14 g",
+      cholesterol: "65 mg",
+    },
+    ingredients: {
+      main: ["Chicken breast", "Mixed greens", "Bell peppers", "Carrot", "Red cabbage", "Almonds"],
+      sauce: ["Honey", "Mustard", "Olive oil", "Lemon"],
+    },
+    directions: [
+      { title: "Cook the chicken", text: "Season and grill or pan-fry the chicken, then slice." },
+      { title: "Prepare the salad", text: "Chop all vegetables and arrange on a plate." },
+      { title: "Make the dressing", text: "Whisk honey, mustard, oil and lemon. Drizzle over the salad." },
+    ],
+  },
+  {
+    id: 106,
+    title: "Barbeque Spicy Sandwiches with Chips",
+    time: "30 Minutes",
+    category: "Snack",
+    image: more6,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "15 Minutes",
+    cookTime: "15 Minutes",
+    description: "Spicy barbeque sandwiches served with crispy chips.",
+    nutrition: {
+      calories: "480 kcal",
+      totalFat: "22 g",
+      protein: "26 g",
+      carbohydrate: "48 g",
+      cholesterol: "70 mg",
+    },
+    ingredients: {
+      main: ["Chicken or pork", "BBQ sauce", "Sandwich buns", "Coleslaw", "Pickles"],
+      sauce: ["Spicy BBQ sauce"],
+    },
+    directions: [
+      { title: "Cook the meat", text: "Grill or pan-fry the meat and coat with spicy BBQ sauce." },
+      { title: "Assemble the sandwich", text: "Load the bun with meat, coleslaw and pickles. Serve with chips." },
+    ],
+  },
+  {
+    id: 107,
+    title: "Firecracker Vegan Lettuce Wraps - Spicy!",
+    time: "30 Minutes",
+    category: "Seafood",
+    image: more7,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "15 Minutes",
+    cookTime: "15 Minutes",
+    description: "Spicy vegan lettuce wraps with a firecracker sauce.",
+    nutrition: {
+      calories: "220 kcal",
+      totalFat: "12 g",
+      protein: "8 g",
+      carbohydrate: "20 g",
+      cholesterol: "0 mg",
+    },
+    ingredients: {
+      main: ["Lettuce leaves", "Tofu or mushrooms", "Carrot", "Cabbage", "Spring onion"],
+      sauce: ["Chili sauce", "Soy sauce", "Sesame oil", "Garlic"],
+    },
+    directions: [
+      { title: "Prepare the filling", text: "Stir-fry tofu/mushrooms with vegetables and spices." },
+      { title: "Make the sauce", text: "Mix chili sauce, soy and sesame oil." },
+      { title: "Wrap and serve", text: "Spoon the filling into lettuce leaves and drizzle with sauce." },
+    ],
+  },
+  {
+    id: 108,
+    title: "Chicken Ramen Soup with Mushroom",
+    time: "30 Minutes",
+    category: "Japanese",
+    image: more8,
+    author: "John Smith",
+    authorImg: authorJohn,
+    date: "15 March 2022",
+    prepTime: "10 Minutes",
+    cookTime: "20 Minutes",
+    description: "Comforting chicken ramen soup with mushrooms and soft-boiled egg.",
+    nutrition: {
+      calories: "380 kcal",
+      totalFat: "14 g",
+      protein: "26 g",
+      carbohydrate: "42 g",
+      cholesterol: "120 mg",
+    },
+    ingredients: {
+      main: ["Ramen noodles", "Chicken", "Mushrooms", "Egg", "Spring onion", "Broth"],
+      sauce: ["Soy sauce", "Miso", "Sesame oil"],
+    },
+    directions: [
+      { title: "Prepare the broth", text: "Simmer chicken and mushrooms in the broth with seasonings." },
+      { title: "Cook noodles and egg", text: "Boil noodles and soft-boil the egg." },
+      { title: "Assemble the bowl", text: "Place noodles in a bowl, pour broth, add toppings and egg." },
+    ],
+  },
+];
+
+export { TimerIcon, ForkKnifeIcon };

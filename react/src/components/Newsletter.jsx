@@ -1,7 +1,23 @@
+import plateImg from "../assets/images/Photo-plate.png";
+import saladLeft from "../assets/images/salad-left.png";
+
 const Newsletter = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
       <div className="bg-[#E7F9FD] rounded-[40px] md:rounded-[60px] py-16 md:py-20 px-6 relative overflow-hidden">
+        
+        <img
+          src={saladLeft}
+          alt=""
+          className="hidden md:block absolute bottom-0 left-0 w-[180px] lg:w-[220px] xl:w-[260px] object-contain pointer-events-none select-none"
+        />
+
+        <img
+          src={plateImg}
+          alt=""
+          className="hidden md:block absolute bottom-0 right-0 w-[180px] lg:w-[240px] xl:w-[280px] object-contain pointer-events-none select-none"
+        />
+
         <div className="max-w-2xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Deliciousness to your inbox

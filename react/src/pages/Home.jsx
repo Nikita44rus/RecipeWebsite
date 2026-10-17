@@ -423,7 +423,7 @@ const Home = () => {
                   <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                 </Link>
                 <button onClick={() => toggleLike(recipe.id)} className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition">
-                  <img src={liked[recipe.id] ? redLove : whiteLove} alt="like" className="w-6 h-6 object-contain" />
+                  <img src={liked[recipe.id] ? redLove : whiteLove} alt="like" className="w-9 h-9 object-contain" />
                 </button>
               </div>
               <div className="p-5 flex flex-col flex-grow">
@@ -453,7 +453,7 @@ const Home = () => {
                   <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                 </Link>
                 <button onClick={() => toggleLike(recipe.id)} className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition">
-                  <img src={liked[recipe.id] ? redLove : whiteLove} alt="like" className="w-6 h-6 object-contain" />
+                  <img src={liked[recipe.id] ? redLove : whiteLove} alt="like" className="w-9 h-9 object-contain" />
                 </button>
               </div>
               <div className="p-5 flex flex-col flex-grow">
@@ -507,11 +507,11 @@ const Home = () => {
               <div key={post.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
                 <div className="flex items-center justify-between px-3 py-2.5">
                   <div className="flex items-center gap-2">
-                    <img src={instaAvatar} alt="Foodieland" className="w-7 h-7 rounded-full object-cover" />
+                    <img src={instaAvatar} alt="Foodieland" className="w-6 h-6 rounded-full object-cover" />
                     <div className="leading-tight">
                       <div className="flex items-center gap-1">
                         <p className="text-xs font-semibold">Foodieland.</p>
-                        <img src={instaBlue} alt="verified" className="w-3 h-3" />
+                        <img src={instaBlue} alt="verified" className="w-2 h-2" />
                       </div>
                       <p className="text-[10px] text-gray-500">Tokyo, Japan</p>
                     </div>
@@ -581,7 +581,7 @@ const Home = () => {
                   <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
                 </Link>
                 <button onClick={() => toggleLike(recipe.id)} className="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center shadow hover:scale-110 transition">
-                  <img src={liked[recipe.id] ? redLove : whiteLove} alt="like" className="w-5 h-5 object-contain" />
+                  <img src={liked[recipe.id] ? redLove : whiteLove} alt="like" className="w-9 h-9 object-contain" />
                 </button>
               </div>
               <Link to={`/recipe/${recipe.id}`}>
