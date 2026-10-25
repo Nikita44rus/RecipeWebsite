@@ -60,20 +60,20 @@ const Recipes = () => {
       </section>
 
       {/* Поиск */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="max-w-xl mx-auto relative">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+        <div className="max-w-xl mx-auto flex items-center bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <input
             type="text"
             placeholder="Search recipes..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full px-6 py-4 rounded-full border border-gray-200 outline-none focus:ring-2 focus:ring-black/10 text-sm"
-          />
-          <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-gradient-to-b from-gray-900 to-black text-white px-6 py-2.5 rounded-full text-sm font-medium">
-            Search
-          </button>
+            className="flex-1 px-6 py-3.5 outline-none text-sm bg-transparent"
+        />
+        <button className="bg-black text-white px-8 py-3.5 rounded-xl text-sm font-medium m-1 hover:bg-gray-800 transition shrink-0">
+          Search
+        </button>
         </div>
-      </section>
+</section>
 
       {/* Сетка рецептов */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
