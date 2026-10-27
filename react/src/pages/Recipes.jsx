@@ -6,27 +6,23 @@ import { recipes } from "../data/recipes";
 const Recipes = () => {
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const recipesPerPage = 6; //карточек на одной странице
+  const recipesPerPage = 6;
 
-  // Фильтрация по поиску
   const filtered = recipes.filter((r) =>
     r.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  // Сброс на первую страницу при изменении поиска
   useEffect(() => {
     setCurrentPage(1);
   }, [search]);
 
-  // Пагинация
   const totalPages = Math.ceil(filtered.length / recipesPerPage);
   const startIndex = (currentPage - 1) * recipesPerPage;
   const currentRecipes = filtered.slice(startIndex, startIndex + recipesPerPage);
 
-  // Генерация номеров страниц
   const getPageNumbers = () => {
     const pages = [];
-    const maxVisible = 5; // максимум видимых кнопок
+    const maxVisible = 5;
 
     if (totalPages <= maxVisible) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
@@ -50,7 +46,6 @@ const Recipes = () => {
 
   return (
     <div className="bg-white">
-      {/* Заголовок */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Recipes</h1>
         <p className="text-gray-500 max-w-2xl mx-auto text-[15px]">

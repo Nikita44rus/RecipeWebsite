@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import TimerIcon from "../assets/images/Timer.svg";
 import ForkKnifeIcon from "../assets/images/ForkKnife.svg";
 import whiteLove from "../assets/images/white-love.png";
 import redLove from "../assets/images/red-love.png";
+import { useFavorites } from "../context/FavoritesContext";
 
 const RecipeCard = ({ recipe }) => {
-  const [liked, setLiked] = useState(false);
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const liked = isFavorite(recipe.id);
 
   return (
     <div
@@ -22,7 +23,12 @@ const RecipeCard = ({ recipe }) => {
           />
         </Link>
         <button
-          onClick={() => setLiked(!liked)}
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleFavorite(recipe.id);
+          }}
           className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition"
         >
           <img

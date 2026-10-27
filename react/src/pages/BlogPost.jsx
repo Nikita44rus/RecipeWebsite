@@ -11,7 +11,6 @@ const BlogPost = () => {
 
   return (
     <div className="bg-white">
-      {/* Заголовок статьи */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 text-center">
         <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
           {post.title}
@@ -33,7 +32,6 @@ const BlogPost = () => {
         </p>
       </section>
 
-      {/* Большая картинка */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <img
           src={post.image}
@@ -42,10 +40,8 @@ const BlogPost = () => {
         />
       </section>
 
-      {/* Контент статьи + Share */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="flex flex-col lg:flex-row gap-12">
-          {/* Текст статьи */}
           <div className="lg:w-[70%] max-w-3xl">
             {post.content.map((block, index) => {
               if (block.type === "heading") {
@@ -94,7 +90,6 @@ const BlogPost = () => {
               </p>
 
               <div className="flex flex-col gap-3 items-center">
-                {/* Facebook */}
                 <button
                   className="w-12 h-12 rounded-full bg-gray-100 hover:bg-black hover:text-white transition flex items-center justify-center"
                   aria-label="Facebook"
@@ -104,7 +99,6 @@ const BlogPost = () => {
                   </svg>
                 </button>
 
-                {/* Twitter */}
                 <button
                   className="w-12 h-12 rounded-full bg-gray-100 hover:bg-black hover:text-white transition flex items-center justify-center"
                   aria-label="Twitter"
@@ -114,7 +108,6 @@ const BlogPost = () => {
                   </svg>
                 </button>
 
-                {/* Instagram */}
                 <button
                   className="w-12 h-12 rounded-full bg-gray-100 hover:bg-black hover:text-white transition flex items-center justify-center"
                   aria-label="Instagram"
@@ -131,7 +124,6 @@ const BlogPost = () => {
 
       <Newsletter />
 
-      {/* You may like these recipes */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">
           Check out the delicious recipe

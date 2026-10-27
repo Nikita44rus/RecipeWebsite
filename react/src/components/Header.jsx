@@ -10,21 +10,19 @@ const Header = () => {
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
           <NavLink to="/" className="text-2xl font-bold tracking-tight">
             Foodieland<span className="text-orange-500">.</span>
           </NavLink>
 
-          {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8 text-[15px]">
             <NavLink to="/" className={linkClass}>Home</NavLink>
             <NavLink to="/recipes" className={linkClass}>Recipes</NavLink>
+            <NavLink to="/favorites" className={linkClass}>Favorites</NavLink>
             <NavLink to="/blog" className={linkClass}>Blog</NavLink>
             <NavLink to="/contact" className={linkClass}>Contact</NavLink>
             <NavLink to="/about" className={linkClass}>About us</NavLink>
           </nav>
 
-          {/* Social icons */}
           <div className="flex items-center gap-4">
             <a href="#" className="text-gray-600 hover:text-black">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>

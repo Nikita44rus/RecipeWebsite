@@ -9,7 +9,7 @@ import AdsImg from "../assets/images/Ads.png";
 import PrintIcon from "../assets/images/printer.png";
 import ShareIcon from "../assets/images/share.png";
 
-// Компонент одного ингредиента с рабочей галочкой
+// Компонент одного ингредиента с галочкой
 const IngredientItem = ({ text }) => {
   const [checked, setChecked] = useState(false);
 
@@ -46,13 +46,11 @@ const RecipeDetails = () => {
 
   return (
     <div className="bg-white">
-      {/* HEADER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
         <h1 className="text-3xl md:text-5xl font-bold mb-8 max-w-4xl leading-tight">
           {recipe.title}
         </h1>
 
-        {/* Метаданные + кнопки Print/Share */}
         <div className="flex flex-wrap items-center justify-between gap-6 mb-10">
           <div className="flex flex-wrap items-center gap-0 text-sm text-gray-600">
             <div className="flex items-center gap-3 pr-6">
@@ -138,7 +136,6 @@ const RecipeDetails = () => {
               alt={recipe.title}
               className="w-full h-full object-cover min-h-[420px]"
             />
-            {/* Play button */}
             <button className="absolute inset-0 flex items-center justify-center group">
               <div className="w-[120px] h-[120px] bg-white rounded-full flex items-center justify-center shadow-xl group-hover:scale-105 transition">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -173,7 +170,6 @@ const RecipeDetails = () => {
           </div>
         </div>
 
-        {/* Описание */}
         <p className="text-gray-600 leading-relaxed mb-12 text-[15px] max-w-4xl">
           {recipe.description}
         </p>
@@ -265,7 +261,6 @@ const RecipeDetails = () => {
         </div>
       </section>
 
-      {/* You may like these recipe too */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">
           You may like these recipe too

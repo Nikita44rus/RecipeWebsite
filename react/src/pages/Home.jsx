@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useFavorites } from "../context/FavoritesContext";
 import Newsletter from "../components/Newsletter";
 
 //Swiper
@@ -72,14 +72,7 @@ import more7 from "../assets/images/more/food-7.png";
 import more8 from "../assets/images/more/food-8.png";
 
 const Home = () => {
-  const [liked, setLiked] = useState({});
-
-  const toggleLike = (id) => {
-    setLiked((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   const categories = [
     { name: "Breakfast", image: catBreakfast, gradientColor: "#f3f4f6" },
@@ -156,7 +149,7 @@ const Home = () => {
           {/* SLIDE 1 */}
           <SwiperSlide>
             <div className="bg-[#E7F9FD] flex flex-col lg:flex-row min-h-[520px] relative">
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
+              <div className="hidden lg:flex absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
                 <img src={BadgeCenter} alt="Handpicked Recipes" className="w-[140px] h-[140px] object-contain drop-shadow-xl" />
               </div>
               <div className="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
@@ -201,7 +194,7 @@ const Home = () => {
           {/* SLIDE 2 */}
           <SwiperSlide>
             <div className="bg-[#E7F9FD] flex flex-col lg:flex-row min-h-[520px] relative">
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
+              <div className="hidden lg:flex absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
                 <img src={BadgeCenter} alt="Handpicked Recipes" className="w-[140px] h-[140px] object-contain drop-shadow-xl" />
               </div>
               <div className="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
@@ -246,7 +239,7 @@ const Home = () => {
           {/* SLIDE 3 */}
           <SwiperSlide>
             <div className="bg-[#E7F9FD] flex flex-col lg:flex-row min-h-[520px] relative">
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
+              <div className="hidden lg:flex absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
                 <img src={BadgeCenter} alt="Handpicked Recipes" className="w-[140px] h-[140px] object-contain drop-shadow-xl" />
               </div>
               <div className="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
@@ -291,7 +284,7 @@ const Home = () => {
           {/* SLIDE 4 */}
           <SwiperSlide>
             <div className="bg-[#E7F9FD] flex flex-col lg:flex-row min-h-[520px] relative">
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
+              <div className="hidden lg:flex absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
                 <img src={BadgeCenter} alt="Handpicked Recipes" className="w-[140px] h-[140px] object-contain drop-shadow-xl" />
               </div>
               <div className="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
@@ -336,7 +329,7 @@ const Home = () => {
           {/* SLIDE 5 */}
           <SwiperSlide>
             <div className="bg-[#E7F9FD] flex flex-col lg:flex-row min-h-[520px] relative">
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
+              <div className="hidden lg:flex absolute inset-0 flex items-center justify-center pointer-events-none z-20 -translate-y-35 translate-x-6">
                 <img src={BadgeCenter} alt="Handpicked Recipes" className="w-[140px] h-[140px] object-contain drop-shadow-xl" />
               </div>
               <div className="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
@@ -422,8 +415,8 @@ const Home = () => {
                 <Link to={`/recipe/${recipe.id}`}>
                   <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                 </Link>
-                <button onClick={() => toggleLike(recipe.id)} className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition">
-                  <img src={liked[recipe.id] ? redLove : whiteLove} alt="like" className="w-9 h-9 object-contain" />
+                <button onClick={() => toggleFavorite(recipe.id)} className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition">
+                  <img src={isFavorite(recipe.id) ? redLove : whiteLove} alt="like" className="w-9 h-9 object-contain" />
                 </button>
               </div>
               <div className="p-5 flex flex-col flex-grow">
@@ -452,8 +445,8 @@ const Home = () => {
                 <Link to={`/recipe/${recipe.id}`}>
                   <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                 </Link>
-                <button onClick={() => toggleLike(recipe.id)} className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition">
-                  <img src={liked[recipe.id] ? redLove : whiteLove} alt="like" className="w-9 h-9 object-contain" />
+                <button onClick={() => toggleFavorite(recipe.id)} className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition">
+                  <img src={isFavorite(recipe.id) ? redLove : whiteLove} alt="like" className="w-9 h-9 object-contain" />
                 </button>
               </div>
               <div className="p-5 flex flex-col flex-grow">
@@ -580,8 +573,8 @@ const Home = () => {
                 <Link to={`/recipe/${recipe.id}`}>
                   <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
                 </Link>
-                <button onClick={() => toggleLike(recipe.id)} className="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center shadow hover:scale-110 transition">
-                  <img src={liked[recipe.id] ? redLove : whiteLove} alt="like" className="w-9 h-9 object-contain" />
+                <button onClick={() => toggleFavorite(recipe.id)} className="absolute top-3 right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center shadow hover:scale-110 transition">
+                  <img src={isFavorite(recipe.id) ? redLove : whiteLove} alt="like" className="w-9 h-9 object-contain" />
                 </button>
               </div>
               <Link to={`/recipe/${recipe.id}`}>

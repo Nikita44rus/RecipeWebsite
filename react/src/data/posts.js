@@ -13,8 +13,6 @@ import post3 from "../assets/images/blog/blog-3.png";
 import post4 from "../assets/images/blog/blog-4.png";
 import post5 from "../assets/images/blog/blog-5.png";
 import post6 from "../assets/images/blog/blog-6.png";
-
-// Доп. картинки для Full Guide
 import chefFire from "../assets/images/blog/image-29.png";
 import womanCooking from "../assets/images/blog/rectangle-23.png";
 

@@ -32,7 +32,6 @@ const Blog = () => {
 
   return (
     <div className="bg-white">
-      {/* Заголовок */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Blog & Article</h1>
         <p className="text-gray-500 max-w-2xl mx-auto text-[15px]">
@@ -41,7 +40,6 @@ const Blog = () => {
         </p>
       </section>
 
-      {/* Поиск — как поле email в Newsletter */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
         <div className="max-w-xl mx-auto flex items-center bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <input
@@ -57,10 +55,8 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Контент */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
         <div className="flex flex-col lg:flex-row gap-12">
-          {/* Список статей */}
           <div className="lg:w-[65%] space-y-10">
             {currentPosts.length > 0 ? (
               currentPosts.map((post) => (
@@ -101,7 +97,6 @@ const Blog = () => {
             )}
           </div>
 
-          {/* Сайдбар */}
           <div className="lg:w-[35%]">
             <h3 className="font-bold text-lg mb-6">Tasty Recipes</h3>
             <div className="space-y-5 mb-10">
@@ -137,10 +132,8 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Пагинация — квадратики, по центру под списком */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="flex justify-center items-center gap-2 flex-wrap">
-          {/* Страницы 1–5 */}
           {[1, 2, 3, 4, 5].map((page) => (
             <button
               key={page}
@@ -155,12 +148,10 @@ const Blog = () => {
             </button>
           ))}
 
-          {/* Многоточие */}
           <span className="w-10 h-10 flex items-center justify-center text-gray-400 text-sm">
             ...
           </span>
 
-          {/* Стрелка вправо */}
           <button
             onClick={() => goToPage(currentPage + 1)}
             className="w-10 h-10 rounded-lg bg-gray-100 text-gray-700 hover:bg-black hover:text-white flex items-center justify-center text-sm font-medium transition"

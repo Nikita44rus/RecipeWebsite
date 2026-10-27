@@ -21,7 +21,6 @@ import more8 from "../assets/images/more/food-8.png";
 import authorJohn from "../assets/images/author-john.png";
 
 export const recipes = [
-  //Simple & Tasty
   {
     id: 1,
     title: "Big and Juicy Wagyu Beef Cheeseburger",
