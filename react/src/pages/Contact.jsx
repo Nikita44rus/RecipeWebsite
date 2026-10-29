@@ -1,10 +1,15 @@
+import { useState, useEffect } from "react";
 import Newsletter from "../components/Newsletter";
 import RecipeCard from "../components/RecipeCard";
-import { recipes } from "../data/recipes";
+import { fetchRecipes } from "../services/api";
 import chefImage from "../assets/images/chief.png";
 
 const Contact = () => {
-  const bottomRecipes = recipes.slice(0, 4);
+  const [bottomRecipes, setBottomRecipes] = useState([]);
+
+  useEffect(() => {
+    fetchRecipes().then((r) => setBottomRecipes(r.slice(0, 4)));
+  }, []);
 
   return (
     <div className="bg-white">
@@ -14,7 +19,6 @@ const Contact = () => {
         </h1>
 
         <div className="flex flex-col md:flex-row gap-12 items-center md:items-start">
-          {/* Image с градиентом */}
           <div className="md:w-1/3 w-full max-w-sm">
             <div className="rounded-[30px] p-6 flex items-end justify-center overflow-hidden bg-gradient-to-b from-white to-[#E7F9FD]">
               <img
@@ -25,7 +29,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Form */}
           <form className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">
@@ -97,7 +100,6 @@ const Contact = () => {
 
       <Newsletter />
 
-      {/* Рецепты внизу */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">
           Check out the delicious recipe

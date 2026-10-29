@@ -1,39 +1,46 @@
 import { useState, useEffect } from "react";
 import RecipeCard from "../components/RecipeCard";
 import Newsletter from "../components/Newsletter";
-import { recipes } from "../data/recipes";
+import { fetchRecipes } from "../services/api";
 
 const Recipes = () => {
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const recipesPerPage = 6;
 
-  const filtered = recipes.filter((r) =>
-    r.title.toLowerCase().includes(search.toLowerCase())
-  );
+  useEffect(() => {
+    fetchRecipes()
+      .then(setRecipes)
+      .catch((e) => setError(e.message || "Failed to load"))
+      .finally(() => setLoading(false));
+  }, []);
 
   useEffect(() => {
     setCurrentPage(1);
   }, [search]);
 
-  const totalPages = Math.ceil(filtered.length / recipesPerPage);
+  const filtered = recipes.filter((r) =>
+    r.title.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const totalPages = Math.ceil(filtered.length / recipesPerPage) || 1;
   const startIndex = (currentPage - 1) * recipesPerPage;
   const currentRecipes = filtered.slice(startIndex, startIndex + recipesPerPage);
 
   const getPageNumbers = () => {
     const pages = [];
     const maxVisible = 5;
-
     if (totalPages <= maxVisible) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else if (currentPage <= 3) {
+      pages.push(1, 2, 3, 4, "...", totalPages);
+    } else if (currentPage >= totalPages - 2) {
+      pages.push(1, "...", totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
     } else {
-      if (currentPage <= 3) {
-        pages.push(1, 2, 3, 4, "...", totalPages);
-      } else if (currentPage >= totalPages - 2) {
-        pages.push(1, "...", totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
-      } else {
-        pages.push(1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages);
-      }
+      pages.push(1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages);
     }
     return pages;
   };
@@ -44,17 +51,22 @@ const Recipes = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  if (loading) {
+    return <p className="text-center py-20 text-gray-500">Loading recipes...</p>;
+  }
+  if (error) {
+    return <p className="text-center py-20 text-red-500">{error}</p>;
+  }
+
   return (
     <div className="bg-white">
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Recipes</h1>
         <p className="text-gray-500 max-w-2xl mx-auto text-[15px]">
-          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliquat enim ad minim
+          Browse our collection of recipes for every mood and occasion.
         </p>
       </section>
 
-      {/* Поиск */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
         <div className="max-w-xl mx-auto flex items-center bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <input
@@ -63,14 +75,13 @@ const Recipes = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="flex-1 px-6 py-3.5 outline-none text-sm bg-transparent"
-        />
-        <button className="bg-black text-white px-8 py-3.5 rounded-xl text-sm font-medium m-1 hover:bg-gray-800 transition shrink-0">
-          Search
-        </button>
+          />
+          <button className="bg-black text-white px-8 py-3.5 rounded-xl text-sm font-medium m-1 hover:bg-gray-800 transition shrink-0">
+            Search
+          </button>
         </div>
-</section>
+      </section>
 
-      {/* Сетка рецептов */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
         {currentRecipes.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,15 +94,13 @@ const Recipes = () => {
         )}
       </section>
 
-      {/* Пагинация */}
       {totalPages > 1 && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="flex justify-center items-center gap-2 flex-wrap">
-            {/* Кнопка "Назад" */}
             <button
               onClick={() => goToPage(currentPage - 1)}
               disabled={currentPage === 1}
-              className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition ${
+              className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-medium transition ${
                 currentPage === 1
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                   : "bg-gray-100 hover:bg-black hover:text-white"
@@ -99,13 +108,11 @@ const Recipes = () => {
             >
               ‹
             </button>
-
-            {/* Номера страниц */}
             {getPageNumbers().map((page, index) => (
               <button
                 key={index}
                 onClick={() => goToPage(page)}
-                className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition ${
+                className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-medium transition ${
                   page === currentPage
                     ? "bg-black text-white"
                     : page === "..."
@@ -116,12 +123,10 @@ const Recipes = () => {
                 {page}
               </button>
             ))}
-
-            {/* Кнопка "Вперёд" */}
             <button
               onClick={() => goToPage(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition ${
+              className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-medium transition ${
                 currentPage === totalPages
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                   : "bg-gray-100 hover:bg-black hover:text-white"

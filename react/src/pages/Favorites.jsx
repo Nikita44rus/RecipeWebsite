@@ -1,12 +1,26 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import RecipeCard from "../components/RecipeCard";
 import Newsletter from "../components/Newsletter";
-import { recipes } from "../data/recipes";
+import { fetchRecipes } from "../services/api";
 import { useFavorites } from "../context/FavoritesContext";
 
 const Favorites = () => {
   const { favorites } = useFavorites();
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchRecipes()
+      .then(setRecipes)
+      .finally(() => setLoading(false));
+  }, []);
+
   const favoriteRecipes = recipes.filter((r) => favorites.includes(r.id));
+
+  if (loading) {
+    return <p className="text-center py-20 text-gray-500">Loading...</p>;
+  }
 
   return (
     <div className="bg-white">
@@ -29,7 +43,7 @@ const Favorites = () => {
             <p className="text-gray-500 text-lg mb-6">No favorites yet</p>
             <Link
               to="/recipes"
-              className="inline-block bg-black text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-800 transition"
+              className="inline-block bg-gradient-to-b from-gray-900 to-black text-white px-8 py-3.5 rounded-[16px] text-sm font-medium hover:from-gray-800 hover:to-gray-900 transition"
             >
               Browse recipes
             </Link>

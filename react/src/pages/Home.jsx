@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useFavorites } from "../context/FavoritesContext";
 import Newsletter from "../components/Newsletter";
+import { fetchRecipes } from "../services/api";
+import { useFavorites } from "../context/FavoritesContext";
 
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -25,16 +27,6 @@ import catMeat from "../assets/images/categories/meat.png";
 import catDessert from "../assets/images/categories/dessert.png";
 import catLunch from "../assets/images/categories/lunch.png";
 import catChocolate from "../assets/images/categories/chocolate.png";
-
-//Рецепты (Simple & Tasty)
-import food13 from "../assets/images/recipes/food-13.png";
-import food14 from "../assets/images/recipes/food-14.png";
-import food15 from "../assets/images/recipes/food-15.png";
-import food16 from "../assets/images/recipes/food-16.png";
-import food17 from "../assets/images/recipes/food-17.png";
-import food18 from "../assets/images/recipes/food-18.png";
-import food19 from "../assets/images/recipes/food-19.png";
-import food20 from "../assets/images/recipes/food-20.png";
 
 //Сердечки и реклама
 import whiteLove from "../assets/images/white-love.png";
@@ -61,18 +53,13 @@ import food2 from "../assets/images/food-2.png";
 import food3 from "../assets/images/food-3.png";
 import food4 from "../assets/images/food-4.png";
 
-//More Recipes
-import more1 from "../assets/images/more/food-1.png";
-import more2 from "../assets/images/more/food-2.png";
-import more3 from "../assets/images/more/food-3.png";
-import more4 from "../assets/images/more/food-4.png";
-import more5 from "../assets/images/more/food-5.png";
-import more6 from "../assets/images/more/food-6.png";
-import more7 from "../assets/images/more/food-7.png";
-import more8 from "../assets/images/more/food-8.png";
-
 const Home = () => {
   const { isFavorite, toggleFavorite } = useFavorites();
+  const [apiRecipes, setApiRecipes] = useState([]);
+
+  useEffect(() => {
+    fetchRecipes().then(setApiRecipes);
+  }, []);
 
   const categories = [
     { name: "Breakfast", image: catBreakfast, gradientColor: "#f3f4f6" },
@@ -81,28 +68,6 @@ const Home = () => {
     { name: "Dessert", image: catDessert, gradientColor: "#fef9c3" },
     { name: "Lunch", image: catLunch, gradientColor: "#ffedd5" },
     { name: "Chocolate", image: catChocolate, gradientColor: "#fef3c7" },
-  ];
-
-  const recipes = [
-    { id: 1, title: "Big and Juicy Wagyu Beef Cheeseburger", time: "30 Minutes", category: "Snack", image: food13 },
-    { id: 2, title: "Fresh Lime Roasted Salmon with Ginger Sauce", time: "30 Minutes", category: "Fish", image: food14 },
-    { id: 3, title: "Strawberry Oatmeal Pancake with Honey Syrup", time: "30 Minutes", category: "Breakfast", image: food15 },
-    { id: 4, title: "Fresh and Healthy Mixed Mayonnaise Salad", time: "30 Minutes", category: "Healthy", image: food16 },
-    { id: 5, title: "Chicken Meatballs with Cream Cheese", time: "30 Minutes", category: "Meat", image: food17 },
-    { id: 7, title: "Fruity Pancake with Orange & Blueberry", time: "30 Minutes", category: "Sweet", image: food18 },
-    { id: 8, title: "The Best Easy One Pot Chicken and Rice", time: "30 Minutes", category: "Snack", image: food19 },
-    { id: 9, title: "The Creamiest Creamy Chicken and Bacon Pasta", time: "30 Minutes", category: "Noodles", image: food20 },
-  ];
-
-  const moreRecipes = [
-    { id: 101, title: "Mixed Tropical Fruit Salad with Superfood Boosts", time: "30 Minutes", category: "Healthy", image: more1 },
-    { id: 102, title: "Big and Juicy Wagyu Beef Cheeseburger", time: "30 Minutes", category: "Western", image: more2 },
-    { id: 103, title: "Healthy Japanese Fried Rice with Asparagus", time: "30 Minutes", category: "Healthy", image: more3 },
-    { id: 104, title: "Cauliflower Walnut Vegetarian Taco Meat", time: "30 Minutes", category: "Eastern", image: more4 },
-    { id: 105, title: "Rainbow Chicken Salad with Almond Honey Mustard Dressing", time: "30 Minutes", category: "Healthy", image: more5 },
-    { id: 106, title: "Barbeque Spicy Sandwiches with Chips", time: "30 Minutes", category: "Snack", image: more6 },
-    { id: 107, title: "Firecracker Vegan Lettuce Wraps - Spicy!", time: "30 Minutes", category: "Seafood", image: more7 },
-    { id: 108, title: "Chicken Ramen Soup with Mushroom", time: "30 Minutes", category: "Japanese", image: more8 },
   ];
 
   const instagramPosts = [
@@ -405,7 +370,7 @@ const Home = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {recipes.slice(0, 5).map((recipe) => (
+          {apiRecipes.slice(0, 5).map((recipe) => (
             <div
               key={recipe.id}
               className="group rounded-3xl overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col h-[420px]"
@@ -435,7 +400,7 @@ const Home = () => {
             <img src={AdsImg} alt="Don't forget to eat healthy food" className="w-full h-full object-cover" />
           </div>
 
-          {recipes.slice(5).map((recipe) => (
+          {apiRecipes.slice(5, 8).map((recipe) => (
             <div
               key={recipe.id}
               className="group rounded-3xl overflow-hidden border border-gray-100 hover:shadow-lg transition flex flex-col h-[420px]"
@@ -567,7 +532,7 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {moreRecipes.map((recipe) => (
+          {apiRecipes.slice(8).map((recipe) => (
             <div key={recipe.id} className="group">
               <div className="relative rounded-2xl overflow-hidden mb-4">
                 <Link to={`/recipe/${recipe.id}`}>

@@ -1,11 +1,16 @@
+import { useState, useEffect } from "react";
 import Newsletter from "../components/Newsletter";
 import RecipeCard from "../components/RecipeCard";
-import { recipes } from "../data/recipes";
+import { fetchRecipes } from "../services/api";
 import chefImage from "../assets/images/chief.png";
 import ourStoryPic from "../assets/images/OurStoryPic.svg";
 
 const About = () => {
-  const bottomRecipes = recipes.slice(0, 4);
+  const [bottomRecipes, setBottomRecipes] = useState([]);
+
+  useEffect(() => {
+    fetchRecipes().then((r) => setBottomRecipes(r.slice(0, 4)));
+  }, []);
 
   return (
     <div className="bg-white">
@@ -30,9 +35,7 @@ const About = () => {
           </div>
 
           <div className="lg:w-1/2">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              About Foodieland
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">About Foodieland</h2>
             <p className="text-gray-600 leading-relaxed mb-5 text-[15px]">
               Foodieland is a modern recipe platform created for people who enjoy
               cooking at home. Whether you are looking for a quick weekday dinner,
@@ -50,9 +53,7 @@ const About = () => {
               Besides recipes, Foodieland includes a blog with articles about
               food and cooking, a contact form for questions and feedback, and a
               favorites list so you can keep your preferred recipes in one place.
-              Everything is designed to feel light, friendly, and easy to use.
             </p>
-
             <h3 className="text-lg font-bold mb-3 mt-8">Project Overview</h3>
             <p className="text-gray-600 leading-relaxed text-[15px]">
               This project was developed as part of the Web Development course
@@ -66,25 +67,20 @@ const About = () => {
 
       <section className="bg-[#E7F9FD]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-            Our Mission
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Our Mission</h2>
           <p className="text-gray-600 leading-relaxed text-[15px] max-w-3xl mx-auto text-center mb-5">
-            Our mission is to make cooking more approachable and enjoyable. We
-            believe that good food should not require complicated tools or long
-            hours in the kitchen. Clear recipes, honest photos, and a calm
-            interface help you focus on the process and the result.
+            Our mission is to make cooking more approachable and enjoyable. Clear
+            recipes, honest photos, and a calm interface help you focus on the
+            process and the result.
           </p>
           <p className="text-gray-600 leading-relaxed text-[15px] max-w-3xl mx-auto text-center mb-5">
             We want Foodieland to be a practical companion for beginners and a
-            useful library for experienced home cooks. You can explore new
-            cuisines, revisit classic dishes, and collect favorites that match
-            your taste and schedule.
+            useful library for experienced home cooks.
           </p>
           <p className="text-gray-600 leading-relaxed text-[15px] max-w-3xl mx-auto text-center">
             In the long run, we aim to grow the collection of recipes and
-            articles, improve search and filters, and keep the experience
-            clear, fast, and comfortable for every visitor.
+            articles, improve search and filters, and keep the experience clear,
+            fast, and comfortable for every visitor.
           </p>
         </div>
       </section>
@@ -92,23 +88,18 @@ const About = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="lg:w-1/2">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Our Story
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">Our Story</h2>
             <p className="text-gray-600 leading-relaxed mb-5 text-[15px]">
               Foodieland started as a learning project with a simple idea: present
               recipes and food stories in a way that feels both beautiful and
-              useful. The first version included a home page with categories, a
-              recipe grid, and detailed recipe pages with ingredients and steps.
+              useful.
             </p>
             <p className="text-gray-600 leading-relaxed text-[15px]">
               Later we added a blog, a contact form, and a favorites feature.
-              Today Foodieland is a complete multi-page demo — from discovering
-              recipes to saving favorites and reading articles — built to practice
-              modern front-end development and deliver a clean user experience.
+              Today Foodieland is a complete multi-page demo built to practice
+              modern front-end development.
             </p>
           </div>
-
           <div className="lg:w-1/2 w-full flex justify-center">
             <img
               src={ourStoryPic}
@@ -120,7 +111,7 @@ const About = () => {
       </section>
 
       <Newsletter />
-      
+
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">
           Check out the delicious recipe

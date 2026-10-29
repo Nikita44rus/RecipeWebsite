@@ -1,13 +1,22 @@
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Newsletter from "../components/Newsletter";
 import RecipeCard from "../components/RecipeCard";
-import { posts } from "../data/posts";
-import { recipes } from "../data/recipes";
+import { fetchPostById, fetchRecipes } from "../services/api";
 
 const BlogPost = () => {
   const { id } = useParams();
-  const post = posts.find((p) => p.id === Number(id)) || posts[0];
-  const relatedRecipes = recipes.slice(0, 4);
+  const [post, setPost] = useState(null);
+  const [relatedRecipes, setRelatedRecipes] = useState([]);
+
+  useEffect(() => {
+    fetchPostById(id).then(setPost);
+    fetchRecipes().then((r) => setRelatedRecipes(r.slice(0, 4)));
+  }, [id]);
+
+  if (!post) {
+    return <p className="text-center py-20 text-gray-500">Loading...</p>;
+  }
 
   return (
     <div className="bg-white">
@@ -43,7 +52,7 @@ const BlogPost = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-[70%] max-w-3xl">
-            {post.content.map((block, index) => {
+            {(post.content || []).map((block, index) => {
               if (block.type === "heading") {
                 return (
                   <h2 key={index} className="text-2xl font-bold mt-10 mb-4">
@@ -82,7 +91,6 @@ const BlogPost = () => {
             })}
           </div>
 
-          {/* Share sidebar */}
           <div className="lg:w-[30%]">
             <div className="sticky top-28 flex flex-col items-center">
               <p className="text-sm font-semibold uppercase tracking-wide mb-4 text-gray-500 text-center">

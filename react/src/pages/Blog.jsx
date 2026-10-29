@@ -1,22 +1,33 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Newsletter from "../components/Newsletter";
-import { posts } from "../data/posts";
-import { recipes } from "../data/recipes";
+import { fetchPosts, fetchRecipes } from "../services/api";
 import AdsImg from "../assets/images/Ads.png";
 
 const Blog = () => {
+  const [posts, setPosts] = useState([]);
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
-  const filtered = posts.filter((p) =>
-    p.title.toLowerCase().includes(search.toLowerCase())
-  );
+  useEffect(() => {
+    Promise.all([fetchPosts(), fetchRecipes()])
+      .then(([p, r]) => {
+        setPosts(p);
+        setRecipes(r);
+      })
+      .finally(() => setLoading(false));
+  }, []);
 
   useEffect(() => {
     setCurrentPage(1);
   }, [search]);
+
+  const filtered = posts.filter((p) =>
+    p.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   const totalPages = Math.ceil(filtered.length / postsPerPage) || 1;
   const startIndex = (currentPage - 1) * postsPerPage;
@@ -29,6 +40,10 @@ const Blog = () => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  if (loading) {
+    return <p className="text-center py-20 text-gray-500">Loading...</p>;
+  }
 
   return (
     <div className="bg-white">
@@ -147,11 +162,9 @@ const Blog = () => {
               {page}
             </button>
           ))}
-
           <span className="w-10 h-10 flex items-center justify-center text-gray-400 text-sm">
             ...
           </span>
-
           <button
             onClick={() => goToPage(currentPage + 1)}
             className="w-10 h-10 rounded-lg bg-gray-100 text-gray-700 hover:bg-black hover:text-white flex items-center justify-center text-sm font-medium transition"

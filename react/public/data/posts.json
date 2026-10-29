@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1,
+    "title": "Crochet Projects for Noodle Lovers",
+    "excerpt": "Creative table ideas and handmade touches for anyone who loves a good bowl of noodles at home.",
+    "author": "Wade Warren",
+    "date": "12 November 2021",
+    "content": [
+      {
+        "type": "text",
+        "value": "Noodle dishes are comfort food in many cultures, and the way you serve them can make a weeknight meal feel special. Small details on the table often change the whole mood of dinner."
+      },
+      {
+        "type": "heading",
+        "value": "How did you start out in the food industry?"
+      },
+      {
+        "type": "text",
+        "value": "Many home cooks begin by sharing simple recipes with friends and family. Over time, that habit turns into a closer look at ingredients, plating, and the stories behind everyday dishes."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "10 Vegetarian Recipes To Eat This Month",
+    "excerpt": "A practical shortlist of vegetarian meals you can actually cook on busy weeknights.",
+    "author": "Robert Fox",
+    "date": "12 November 2021",
+    "content": [
+      {
+        "type": "text",
+        "value": "Eating more vegetables does not have to mean complicated recipes. Focus on seasonal produce, one reliable grain, and a dressing or sauce you already like."
+      },
+      {
+        "type": "heading",
+        "value": "Why choose vegetarian?"
+      },
+      {
+        "type": "text",
+        "value": "Vegetarian meals can be lighter on the budget and easier to batch-cook. They also push you to use spices, herbs, and textures in more creative ways."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Full Guide to Becoming a Professional Chef",
+    "excerpt": "An honest look at kitchen life, training paths, and what it really takes to grow as a chef.",
+    "author": "Dianne Russell",
+    "date": "12 November 2021",
+    "content": [
+      {
+        "type": "text",
+        "value": "Becoming a professional chef is less about one big break and more about steady practice. Long services, sharp teamwork, and respect for ingredients shape every strong kitchen career."
+      },
+      {
+        "type": "heading",
+        "value": "How did you start out in the food industry?"
+      },
+      {
+        "type": "text",
+        "value": "Most chefs start with basic prep work: peeling, chopping, cleaning, and learning how a brigade moves during service. Those early tasks teach speed, hygiene, and focus under pressure."
+      },
+      {
+        "type": "heading",
+        "value": "What do you like most about your job?"
+      },
+      {
+        "type": "text",
+        "value": "The best part is often the moment a dish leaves the pass exactly as planned. Guests may never see the stress behind the line, but cooks remember every plate that came out right."
+      },
+      {
+        "type": "heading",
+        "value": "Do you cook at home on your days off?"
+      },
+      {
+        "type": "image",
+        "value": null
+      },
+      {
+        "type": "text",
+        "value": "Many professionals keep home cooking simple on days off: one-pan meals, fresh bread, or a slow stew. Rest matters as much as technique if you want a long career."
+      },
+      {
+        "type": "heading",
+        "value": "What would your advice be to young people looking to get their foot in the door?"
+      },
+      {
+        "type": "text",
+        "value": "Show up early, ask clear questions, and treat every task as training. A strong work ethic opens more doors than perfect Instagram photos of plated food."
+      },
+      {
+        "type": "quote",
+        "value": "Consistency in small tasks is what builds trust in a professional kitchen."
+      },
+      {
+        "type": "heading",
+        "value": "What is the biggest misconception that people have about being a professional chef?"
+      },
+      {
+        "type": "text",
+        "value": "People often think the job is only creativity and TV-style drama. In reality it is repetition, timing, cleanliness, and teamwork repeated every single service."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Simple & Delicious Vegetarian Lasagna",
+    "excerpt": "Layered pasta, vegetables, and cheese in a version that stays comforting without meat.",
+    "author": "Leslie Alexander",
+    "date": "12 November 2021",
+    "content": [
+      {
+        "type": "text",
+        "value": "Vegetarian lasagna works best when the vegetables are cooked enough to release moisture before assembly. That keeps the layers firm and the flavors concentrated."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Plantain and Pinto Stew with Aji Verde",
+    "excerpt": "A hearty stew with plantain, pinto beans, and a bright herbal green sauce on top.",
+    "author": "Courtney Henry",
+    "date": "12 November 2021",
+    "content": [
+      {
+        "type": "text",
+        "value": "Plantain adds gentle sweetness to bean stews, while aji verde brings freshness. Serve with rice or warm flatbread to make it a full meal."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "We're Hiring a Communications Assistant!",
+    "excerpt": "Foodieland is looking for a communications assistant to help with content, community, and campaign support.",
+    "author": "Albert Flores",
+    "date": "12 November 2021",
+    "content": [
+      {
+        "type": "text",
+        "value": "We are expanding our content team and need someone who writes clearly, enjoys food culture, and can help coordinate social posts and newsletters. If that sounds like you, we would like to hear from you."
+      }
+    ]
+  }
+]

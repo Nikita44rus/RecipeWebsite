@@ -1,0 +1,578 @@
+[
+  {
+    "id": 1,
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "time": "30 Minutes",
+    "category": "Snack",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "15 Minutes",
+    "cookTime": "15 Minutes",
+    "description": "A rich wagyu beef burger with melted cheddar, crisp lettuce, and a soft toasted bun. Perfect when you want a restaurant-style burger at home without a long list of steps.",
+    "nutrition": {
+      "calories": "450 kcal",
+      "totalFat": "28 g",
+      "protein": "32 g",
+      "carbohydrate": "25 g",
+      "cholesterol": "95 mg"
+    },
+    "ingredients": {
+      "main": ["Wagyu beef patty", "Cheddar cheese", "Burger bun", "Lettuce", "Tomato", "Onion"],
+      "sauce": ["Special sauce", "Mustard", "Ketchup"]
+    },
+    "directions": [
+      {
+        "title": "Prepare the patty",
+        "text": "Season the wagyu beef lightly with salt and pepper, then form a thick patty. Cook in a hot pan or on a grill until it reaches your preferred doneness."
+      },
+      {
+        "title": "Assemble the burger",
+        "text": "Toast the bun, add the patty, a slice of cheddar, and fresh vegetables. Keep the layers even so the burger is easy to hold."
+      },
+      {
+        "title": "Add sauce and serve",
+        "text": "Finish with the special sauce, mustard, or ketchup. Serve immediately while the cheese is still melted."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Fresh Lime Roasted Salmon with Ginger Sauce",
+    "time": "30 Minutes",
+    "category": "Fish",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "10 Minutes",
+    "cookTime": "20 Minutes",
+    "description": "Oven-roasted salmon with bright lime and a mild ginger sauce. A light main course that still feels special enough for guests.",
+    "nutrition": {
+      "calories": "320 kcal",
+      "totalFat": "18 g",
+      "protein": "34 g",
+      "carbohydrate": "6 g",
+      "cholesterol": "70 mg"
+    },
+    "ingredients": {
+      "main": ["Salmon fillet", "Lime", "Garlic", "Olive oil", "Salt", "Black pepper"],
+      "sauce": ["Fresh ginger", "Soy sauce", "Honey", "Lime juice"]
+    },
+    "directions": [
+      {
+        "title": "Prep the salmon",
+        "text": "Pat the fillet dry, brush with olive oil, and season with salt, pepper, and lime zest."
+      },
+      {
+        "title": "Roast",
+        "text": "Bake until the fish flakes easily with a fork. Avoid overcooking so the center stays moist."
+      },
+      {
+        "title": "Make the ginger sauce",
+        "text": "Warm ginger, soy sauce, honey, and lime juice in a small pan. Spoon over the salmon before serving."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Strawberry Oatmeal Pancake with Honey Syrup",
+    "time": "30 Minutes",
+    "category": "Breakfast",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "15 Minutes",
+    "cookTime": "15 Minutes",
+    "description": "Soft oatmeal pancakes with fresh strawberries and a simple honey syrup. A sweet start to the day that still uses pantry staples.",
+    "nutrition": {
+      "calories": "280 kcal",
+      "totalFat": "8 g",
+      "protein": "9 g",
+      "carbohydrate": "42 g",
+      "cholesterol": "45 mg"
+    },
+    "ingredients": {
+      "main": ["Rolled oats", "Flour", "Milk", "Egg", "Strawberries", "Baking powder"],
+      "sauce": ["Honey", "Butter", "Vanilla"]
+    },
+    "directions": [
+      {
+        "title": "Mix the batter",
+        "text": "Combine oats, flour, milk, egg, and baking powder until smooth. Let the batter rest for a few minutes."
+      },
+      {
+        "title": "Cook the pancakes",
+        "text": "Pour small rounds into a lightly greased pan. Flip when bubbles appear on the surface."
+      },
+      {
+        "title": "Serve with fruit and syrup",
+        "text": "Top with sliced strawberries and warm honey syrup. Serve right away."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Fresh and Healthy Mixed Mayonnaise Salad",
+    "time": "30 Minutes",
+    "category": "Healthy",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "20 Minutes",
+    "cookTime": "10 Minutes",
+    "description": "A crisp mixed salad with a light mayonnaise dressing. Easy to prepare ahead and flexible with seasonal vegetables.",
+    "nutrition": {
+      "calories": "210 kcal",
+      "totalFat": "14 g",
+      "protein": "5 g",
+      "carbohydrate": "16 g",
+      "cholesterol": "15 mg"
+    },
+    "ingredients": {
+      "main": ["Lettuce", "Cucumber", "Tomato", "Corn", "Carrot", "Egg"],
+      "sauce": ["Mayonnaise", "Lemon juice", "Salt", "Pepper"]
+    },
+    "directions": [
+      {
+        "title": "Chop the vegetables",
+        "text": "Wash and cut all vegetables into even pieces so every bite has a mix of textures."
+      },
+      {
+        "title": "Mix the dressing",
+        "text": "Whisk mayonnaise with lemon juice, salt, and pepper until creamy."
+      },
+      {
+        "title": "Toss and serve",
+        "text": "Combine salad and dressing just before serving so the greens stay fresh."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Chicken Meatballs with Cream Cheese",
+    "time": "30 Minutes",
+    "category": "Meat",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "15 Minutes",
+    "cookTime": "15 Minutes",
+    "description": "Tender chicken meatballs with a cream cheese twist. Comfort food that works for dinner or as a party appetizer.",
+    "nutrition": {
+      "calories": "380 kcal",
+      "totalFat": "22 g",
+      "protein": "28 g",
+      "carbohydrate": "12 g",
+      "cholesterol": "110 mg"
+    },
+    "ingredients": {
+      "main": ["Ground chicken", "Cream cheese", "Breadcrumbs", "Egg", "Garlic", "Parsley"],
+      "sauce": ["Tomato sauce", "Cream", "Italian herbs"]
+    },
+    "directions": [
+      {
+        "title": "Form the meatballs",
+        "text": "Mix chicken, cream cheese, breadcrumbs, egg, and seasoning. Roll into even balls."
+      },
+      {
+        "title": "Cook until golden",
+        "text": "Pan-fry or bake until cooked through and lightly browned on the outside."
+      },
+      {
+        "title": "Simmer in sauce",
+        "text": "Warm tomato sauce with a splash of cream, add the meatballs, and simmer briefly before serving."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Fruity Pancake with Orange & Blueberry",
+    "time": "30 Minutes",
+    "category": "Sweet",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "10 Minutes",
+    "cookTime": "20 Minutes",
+    "description": "Fluffy pancakes brightened with orange zest and juicy blueberries. A cheerful plate for weekend breakfast.",
+    "nutrition": {
+      "calories": "300 kcal",
+      "totalFat": "9 g",
+      "protein": "8 g",
+      "carbohydrate": "48 g",
+      "cholesterol": "50 mg"
+    },
+    "ingredients": {
+      "main": ["Flour", "Milk", "Egg", "Blueberries", "Orange zest", "Sugar"],
+      "sauce": ["Maple syrup", "Butter", "Orange juice"]
+    },
+    "directions": [
+      {
+        "title": "Make the batter",
+        "text": "Whisk dry and wet ingredients, then fold in blueberries and orange zest gently."
+      },
+      {
+        "title": "Cook on medium heat",
+        "text": "Cook pancakes until golden on both sides. Do not press them flat in the pan."
+      },
+      {
+        "title": "Finish with syrup",
+        "text": "Serve with butter and a little maple syrup or warm orange juice drizzle."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "The Best Easy One Pot Chicken and Rice",
+    "time": "30 Minutes",
+    "category": "Meat",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "10 Minutes",
+    "cookTime": "20 Minutes",
+    "description": "Chicken and rice cooked in one pot for easy cleanup. Mild spices and a savory broth make it a reliable weeknight dinner.",
+    "nutrition": {
+      "calories": "410 kcal",
+      "totalFat": "12 g",
+      "protein": "30 g",
+      "carbohydrate": "45 g",
+      "cholesterol": "85 mg"
+    },
+    "ingredients": {
+      "main": ["Chicken thighs", "Rice", "Onion", "Garlic", "Chicken broth", "Peas"],
+      "sauce": []
+    },
+    "directions": [
+      {
+        "title": "Brown the chicken",
+        "text": "Season the chicken and sear it in a deep pan until the skin or surface is golden."
+      },
+      {
+        "title": "Add rice and broth",
+        "text": "Stir in onion, garlic, rice, and broth. Bring to a simmer and cover."
+      },
+      {
+        "title": "Finish and rest",
+        "text": "Cook until the rice is tender, add peas at the end, then rest a few minutes before serving."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "The Creamiest Creamy Chicken and Bacon Pasta",
+    "time": "30 Minutes",
+    "category": "Noodles",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "10 Minutes",
+    "cookTime": "20 Minutes",
+    "description": "Creamy pasta with chicken and crispy bacon. A filling dish that comes together in about half an hour.",
+    "nutrition": {
+      "calories": "520 kcal",
+      "totalFat": "26 g",
+      "protein": "31 g",
+      "carbohydrate": "42 g",
+      "cholesterol": "120 mg"
+    },
+    "ingredients": {
+      "main": ["Pasta", "Chicken breast", "Bacon", "Garlic", "Parmesan", "Cream"],
+      "sauce": ["Heavy cream", "Black pepper", "Parsley"]
+    },
+    "directions": [
+      {
+        "title": "Cook pasta and bacon",
+        "text": "Boil the pasta until al dente. In another pan, cook bacon until crisp, then set aside."
+      },
+      {
+        "title": "Cook the chicken",
+        "text": "Sauté sliced chicken in the bacon fat with garlic until cooked through."
+      },
+      {
+        "title": "Make it creamy",
+        "text": "Add cream and parmesan, toss with pasta and bacon, and finish with parsley and pepper."
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "title": "Mixed Tropical Fruit Salad with Superfood Boosts",
+    "time": "30 Minutes",
+    "category": "Healthy",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "20 Minutes",
+    "cookTime": "10 Minutes",
+    "description": "A colorful bowl of tropical fruit with light superfood toppings. Refreshing, quick, and easy to customize.",
+    "nutrition": {
+      "calories": "180 kcal",
+      "totalFat": "4 g",
+      "protein": "3 g",
+      "carbohydrate": "36 g",
+      "cholesterol": "0 mg"
+    },
+    "ingredients": {
+      "main": ["Mango", "Pineapple", "Kiwi", "Berries", "Banana", "Chia seeds"],
+      "sauce": ["Lime juice", "Honey", "Mint"]
+    },
+    "directions": [
+      {
+        "title": "Cut the fruit",
+        "text": "Peel and chop the fruit into bite-size pieces. Keep the colors mixed in the bowl."
+      },
+      {
+        "title": "Dress lightly",
+        "text": "Stir lime juice and honey together, then pour over the fruit."
+      },
+      {
+        "title": "Add toppings",
+        "text": "Sprinkle chia seeds and fresh mint just before serving."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "time": "30 Minutes",
+    "category": "Western",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "15 Minutes",
+    "cookTime": "15 Minutes",
+    "description": "Another take on the classic cheeseburger with a juicy beef patty and simple toppings. Ideal for casual dinners.",
+    "nutrition": {
+      "calories": "460 kcal",
+      "totalFat": "29 g",
+      "protein": "33 g",
+      "carbohydrate": "24 g",
+      "cholesterol": "98 mg"
+    },
+    "ingredients": {
+      "main": ["Beef patty", "Cheese", "Bun", "Pickles", "Lettuce", "Tomato"],
+      "sauce": ["Burger sauce", "Mayonnaise"]
+    },
+    "directions": [
+      {
+        "title": "Cook the beef",
+        "text": "Season and grill the patty until browned and cooked to your liking."
+      },
+      {
+        "title": "Toast and stack",
+        "text": "Toast the bun, add sauce, patty, cheese, and vegetables in layers."
+      },
+      {
+        "title": "Serve hot",
+        "text": "Close the burger and serve immediately with pickles on the side if you like."
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "title": "Healthy Japanese Fried Rice with Asparagus",
+    "time": "30 Minutes",
+    "category": "Healthy",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "15 Minutes",
+    "cookTime": "15 Minutes",
+    "description": "Light fried rice with asparagus and classic Japanese seasonings. A smart way to use leftover rice.",
+    "nutrition": {
+      "calories": "340 kcal",
+      "totalFat": "10 g",
+      "protein": "12 g",
+      "carbohydrate": "50 g",
+      "cholesterol": "40 mg"
+    },
+    "ingredients": {
+      "main": ["Cooked rice", "Asparagus", "Egg", "Spring onion", "Garlic", "Sesame oil"],
+      "sauce": ["Soy sauce", "Mirin", "Salt"]
+    },
+    "directions": [
+      {
+        "title": "Prep the vegetables",
+        "text": "Cut asparagus into short pieces and chop the spring onion."
+      },
+      {
+        "title": "Stir-fry",
+        "text": "Cook egg, then asparagus and garlic in a hot pan. Add rice and break up any clumps."
+      },
+      {
+        "title": "Season",
+        "text": "Add soy sauce and mirin, toss well, and finish with spring onion and sesame oil."
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "title": "Cauliflower Walnut Vegetarian Taco Meat",
+    "time": "30 Minutes",
+    "category": "Eastern",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "15 Minutes",
+    "cookTime": "15 Minutes",
+    "description": "A plant-based taco filling made from cauliflower and walnuts. Spiced to mimic the texture of classic taco meat.",
+    "nutrition": {
+      "calories": "260 kcal",
+      "totalFat": "16 g",
+      "protein": "9 g",
+      "carbohydrate": "22 g",
+      "cholesterol": "0 mg"
+    },
+    "ingredients": {
+      "main": ["Cauliflower", "Walnuts", "Onion", "Garlic", "Chili powder", "Cumin"],
+      "sauce": ["Tomato paste", "Lime juice", "Salt"]
+    },
+    "directions": [
+      {
+        "title": "Pulse the base",
+        "text": "Chop cauliflower and walnuts until they look like coarse crumbs."
+      },
+      {
+        "title": "Cook the spices",
+        "text": "Sauté onion and garlic, add the cauliflower mix and spices, and cook until fragrant."
+      },
+      {
+        "title": "Finish for tacos",
+        "text": "Stir in tomato paste and lime juice. Serve in tortillas with your favorite toppings."
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "title": "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
+    "time": "30 Minutes",
+    "category": "Healthy",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "20 Minutes",
+    "cookTime": "10 Minutes",
+    "description": "A bright chicken salad with crunchy vegetables and a sweet-savory almond honey mustard dressing.",
+    "nutrition": {
+      "calories": "350 kcal",
+      "totalFat": "18 g",
+      "protein": "29 g",
+      "carbohydrate": "18 g",
+      "cholesterol": "75 mg"
+    },
+    "ingredients": {
+      "main": ["Chicken breast", "Mixed greens", "Bell pepper", "Carrot", "Almonds", "Red cabbage"],
+      "sauce": ["Honey", "Mustard", "Olive oil", "Almond butter"]
+    },
+    "directions": [
+      {
+        "title": "Cook the chicken",
+        "text": "Season and cook the chicken until done, then slice it thinly."
+      },
+      {
+        "title": "Build the salad",
+        "text": "Arrange greens and colorful vegetables in a bowl, then add the chicken."
+      },
+      {
+        "title": "Dress and serve",
+        "text": "Whisk the dressing ingredients and drizzle over the salad. Top with almonds."
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "title": "Barbeque Spicy Sandwiches with Chips",
+    "time": "30 Minutes",
+    "category": "Snack",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "15 Minutes",
+    "cookTime": "15 Minutes",
+    "description": "Spicy barbecue sandwiches served with chips. Bold flavor with minimal prep for a casual meal.",
+    "nutrition": {
+      "calories": "480 kcal",
+      "totalFat": "20 g",
+      "protein": "26 g",
+      "carbohydrate": "48 g",
+      "cholesterol": "70 mg"
+    },
+    "ingredients": {
+      "main": ["Sandwich buns", "Cooked chicken or beef", "Onion", "Lettuce", "Chips"],
+      "sauce": ["Barbecue sauce", "Hot sauce", "Mayonnaise"]
+    },
+    "directions": [
+      {
+        "title": "Warm the filling",
+        "text": "Heat the meat with barbecue sauce and a touch of hot sauce until sticky and hot."
+      },
+      {
+        "title": "Toast the buns",
+        "text": "Lightly toast the buns so they hold the sauce without getting soggy too fast."
+      },
+      {
+        "title": "Assemble",
+        "text": "Add filling, onion, and lettuce. Serve with chips on the side."
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "title": "Firecracker Vegan Lettuce Wraps - Spicy!",
+    "time": "30 Minutes",
+    "category": "Healthy",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "15 Minutes",
+    "cookTime": "15 Minutes",
+    "description": "Spicy vegan lettuce wraps with a crisp bite. Great as a starter or a light main dish.",
+    "nutrition": {
+      "calories": "220 kcal",
+      "totalFat": "11 g",
+      "protein": "10 g",
+      "carbohydrate": "20 g",
+      "cholesterol": "0 mg"
+    },
+    "ingredients": {
+      "main": ["Lettuce leaves", "Tofu or mushrooms", "Carrot", "Spring onion", "Garlic", "Ginger"],
+      "sauce": ["Soy sauce", "Chili sauce", "Sesame oil", "Rice vinegar"]
+    },
+    "directions": [
+      {
+        "title": "Cook the filling",
+        "text": "Sauté garlic, ginger, and your plant-based protein until browned and fragrant."
+      },
+      {
+        "title": "Add heat",
+        "text": "Stir in soy sauce, chili sauce, and vinegar. Cook until the sauce coats everything."
+      },
+      {
+        "title": "Wrap and serve",
+        "text": "Spoon the filling into lettuce leaves, top with carrot and spring onion, and serve open."
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "title": "Chicken Ramen Soup with Mushroom",
+    "time": "30 Minutes",
+    "category": "Noodles",
+    "author": "John Smith",
+    "date": "15 March 2022",
+    "prepTime": "10 Minutes",
+    "cookTime": "20 Minutes",
+    "description": "Comforting chicken ramen with mushrooms in a savory broth. Faster than takeout and easy to adapt.",
+    "nutrition": {
+      "calories": "390 kcal",
+      "totalFat": "12 g",
+      "protein": "28 g",
+      "carbohydrate": "44 g",
+      "cholesterol": "80 mg"
+    },
+    "ingredients": {
+      "main": ["Ramen noodles", "Chicken", "Mushrooms", "Spring onion", "Garlic", "Egg"],
+      "sauce": ["Soy sauce", "Broth", "Sesame oil"]
+    },
+    "directions": [
+      {
+        "title": "Build the broth",
+        "text": "Simmer broth with garlic, soy sauce, and sliced mushrooms until fragrant."
+      },
+      {
+        "title": "Cook chicken and noodles",
+        "text": "Add chicken pieces, then cook the noodles in the broth until tender."
+      },
+      {
+        "title": "Serve in bowls",
+        "text": "Divide into bowls, top with spring onion, a soft egg if you like, and a few drops of sesame oil."
+      }
+    ]
+  }
+]
